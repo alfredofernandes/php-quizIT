@@ -11,16 +11,16 @@ Users should be presented with the tests available for them to take and once the
 
 When the user answers the last question, the application should display the user's score and one of the following messages depending on their score:
 
-- If score is greater 80%: _"You have successfully passed the test. You are now certified in -name of the test-!";_
+- If score is greater than or equal 80%: _"You have successfully passed the test. You are now certified in -name of the test-!";_
 - If score is less than 80%: _“Unfortunately you did not pass the test. Please try again later!”;_
 
 The topics for the tests should be chosen carefully and all the questions should be meaningful. All the questions should be based on the certification topics you have chosen. Every user must be registered in the database in order to write the test. Collect basic user information such as:
 
-- First name
-- Last Name
-- Email address
-- Phone Number
-- Address
+- First name;
+- Last Name;
+- Email address;
+- Phone Number;
+- Address;
 
 Users should be allowed to update their accounts and should be able to see their test attempts and scores.
 
