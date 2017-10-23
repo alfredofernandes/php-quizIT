@@ -1,4 +1,4 @@
-**PHP - Final Project**
+## PHP - Final Project
 
 This is a team based assignment and you should work in teams of two or three. If a team has three members, the assignment will have the appendix below.
 
