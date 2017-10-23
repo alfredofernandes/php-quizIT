@@ -33,21 +33,22 @@ Administrators should also be able to add/delete/modify questions as well as que
 
 Administrators should also be allowed to add/disable/modify tests.
 
-## Technical Requirements + Rubric (100 pts):
+## Technical Requirements + Rubric
+_Total: 100 points_
 
-- Design the Entity-Relationship Diagram – 10 pts
-- Create the physical database including all necessary constraints - 10 pts
-- Design and Implement the middle tier using XAMPP on the server side in PHP - 30 pts
-- Design and implement the User Interface (all client-side code must be HTML5-compliant) - 10 pts
-- Your website MUST be responsive (accommodate different devices and resolutions) – 10 pts
-- Document your code internally and/or externally - 10 pts
-- Test your code for accuracy and performance - 10 pts
-- Submit ONE single ZIP file containing - 10 pts
-- All diagrams created
-- All PHP, HTML5, CSS3, Javascript code (you may use additional frameworks and libraries – jquery / jquery-mobile, bootstrap, etc)
-- Generate database script file
-- Provide a readme.txt file explaining what the instructor should do to get your database and code up and running
-- Document any existing / known bug
-- Document group members and student_ids
-- Each group member shall submit an individual file though moodle.
+- 10 pts: Design the Entity-Relationship Diagram
+- 10 pts: Create the physical database including all necessary constraints
+- 30 pts: Design and Implement the middle tier using XAMPP on the server side in PHP
+- 10 pts: Design and implement the User Interface (all client-side code must be HTML5-compliant
+- 10 pts: Your website MUST be responsive (accommodate different devices and resolutions)
+- 10 pts: Document your code internally and/or externally
+- 10 pts: Test your code for accuracy and performance
+- 10 pts: Submit ONE single ZIP file containing:
+	- All diagrams created
+	- All PHP, HTML5, CSS3, Javascript code (you may use additional frameworks and libraries – jquery / jquery-mobile, bootstrap, etc)
+	- Generate database script file
+	- Provide a readme.txt file explaining what the instructor should do to get your database and code up and running
+	- Document any existing / known bug
+	- Document group members and student_ids
+	- Each group member shall submit an individual file though moodle.
 
