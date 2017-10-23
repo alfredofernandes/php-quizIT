@@ -17,9 +17,9 @@ When the user answers the last question, the application should display the user
 The topics for the tests should be chosen carefully and all the questions should be meaningful. All the questions should be based on the certification topics you have chosen. Every user must be registered in the database in order to write the test. Collect basic user information such as:
 
 - First name;
-- Last Name;
+- Last name;
 - Email address;
-- Phone Number;
+- Phone number;
 - Address;
 
 Users should be allowed to update their accounts and should be able to see their test attempts and scores.
