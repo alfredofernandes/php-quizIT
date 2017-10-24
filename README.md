@@ -1,5 +1,5 @@
 ## PHP - Final Project
-_Overview_
+_Overview._
 
 This is a team based assignment and you should work in teams of two or three. If a team has three members, the assignment will have the appendix below.
 
@@ -34,7 +34,7 @@ Administrators should also be able to add/delete/modify questions as well as que
 Administrators should also be allowed to add/disable/modify tests.
 
 ## Technical Requirements + Rubric
-_Total: 100 points_
+_Total: 100 points._
 
 - 10 pts: Design the Entity-Relationship Diagram;
 - 10 pts: Create the physical database including all necessary constraints;
@@ -51,4 +51,3 @@ _Total: 100 points_
 	- Document any existing/known bug;
 	- Document group members and student_ids;
 	- Each group member shall submit an individual file though moodle.
-
