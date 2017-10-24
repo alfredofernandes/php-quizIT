@@ -63,7 +63,7 @@ $ cd php-quizIT
 
 ## Update your /etc/hosts file in your local machine:
 ```
-192.168.99.100 php-quizIT.io
+192.168.99.100 php-quizit.io
 ```
 
 ## Start you docker machine and access it
@@ -88,7 +88,7 @@ $ docker-compose ps
 ```
 
 ## Access in your browser
-http://php-quizIT.io
+http://php-quizit.io
 
 ## Shutdown the containers and docker machine
 ```
