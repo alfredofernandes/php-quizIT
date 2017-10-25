@@ -61,21 +61,21 @@ $ git clone https://github.com/gcrozariol/php-quizIT.git
 $ cd php-quizIT
 ```
 
-**Update /etc/hosts file in your local machine**
-
-Open a new tab in the terminal and run the following code:
+**Open /etc/hosts file using Terminal**
 ```
 $ sudo nano /etc/hosts
 ```
 
-Now, comment all lines that contains 192.168.99.100 - if any - with an # in the beggining of the line.
+**Enter your password**
+Terminal is going to ask your password. Enter it and hit the Return Key.
 
-Also, in the end of the file, add this line:
+**Add this code into the last line of the hosts file**
 ```
 $ 192.168.99.100 php-quizit.io
 ```
 
-To conclude this step, hit Option-O, then Return Key and then Command-W to close this terminal tab.
+**Exit the hosts file**
+Hit Option-O to save the changes, then the Return Key to confirm it and then Option-X to close the file.
 
 **Start the docker machine**
 ```
