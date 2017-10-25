@@ -1,0 +1,38 @@
+version: '2'
+
+volumes:
+    database_data:
+        driver: local
+
+services:
+    php:
+        build: ./docker/php/
+        expose:
+            - 9000
+        ports:
+            - 80:80
+        volumes:
+            - ./www:/var/www/html
+    mysql:
+        image: mysql:latest
+        expose:
+            - 3306
+        ports:
+            - 3306:3306
+        volumes:
+            - database_data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: phpquiz
+            MYSQL_USER: user
+            MYSQL_PASSWORD: secret
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        environment:
+            - PMA_ARBITRARY=1
+        restart: always
+        ports:
+            - 8888:80
+        volumes:
+            - /sessions
