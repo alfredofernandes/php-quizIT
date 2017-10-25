@@ -76,8 +76,8 @@
             </div>
             <h3 class="centered">Ready? Now, choose a test and good luck!</h3>
             <div class="centered">
-                <input class="btn btn-primary btn-custom" type="submit" value="C Quiz">
-                <input class="btn btn-primary btn-custom" type="submit" value="C# Quiz">
+                <input class="btn btn-primary btn-custom" type="submit" name="c_test" value="C Test">
+                <input class="btn btn-primary btn-custom" type="submit" name="c_sharp_test" value="C# Test">
             </div>
         </form>
     </body>

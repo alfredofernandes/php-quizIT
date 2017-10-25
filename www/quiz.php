@@ -4,12 +4,22 @@
 	include 'db_add_user.php';
 
 	// Checking Insertion
-	if(mysqli_affected_rows($connect) === 0){
-		echo "<p>User Added</p>";
-		echo "<a href=\"index.php\">Go Back</a>";
+	if(mysqli_affected_rows($connect) > 0){
+		
+		// C Test Choosen
+		if (isset($_POST['c_test'])) {
+			echo "You chose the C Test.";
+
+		// C# Test Choosen	
+		} else if (isset($_POST['c_sharp_test'])) {
+			echo "You chose the C# Test.";
+
+		}
+		
 	} else {
-		echo "Error: user not added<br />";
-		echo mysqli_error ($connect);
+		// Error
+		echo "Error: user not added<br>";
+		echo mysqli_error($connect);
 	}
 
 ?>
