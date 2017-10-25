@@ -52,45 +52,59 @@ _Total: 100 points._
 	- Document group members and student_ids;
 	- Each group member shall submit an individual file though moodle.
 
-## DOCKER Installation - How to run
+## Docker Setup
 _Make sure you have already installed [Docker](https://www.docker.com)._
 
-## Retrieve git project
+**Retrieve Git Project**
 ```
 $ git clone https://github.com/gcrozariol/php-quizIT.git
 $ cd php-quizIT
 ```
 
-## Update your /etc/hosts file in your local machine:
+**Open /etc/hosts file using Terminal**
 ```
-192.168.99.100 php-quizit.io
+$ sudo nano /etc/hosts
 ```
 
-## Start you docker machine and access it
+**Enter your password**
+
+Terminal is going to ask your password. Enter it and hit the Return Key.
+
+**Add this code into the last line of the hosts file**
+```
+$ 192.168.99.100 php-quizit.io
+```
+
+**Exit the hosts file**
+
+Hit Option-O to save the changes, then the Return Key to confirm it and then Option-X to close the file.
+
+**Start the docker machine**
 ```
 $ docker-machine start
 $ docker-machine ssh
 ```
 
-## Access your directory /Project/php-quizIT
+**Access your project directory**
 ```
 $ cd /Project/php-quizIT
 ```
 
-## Build and start containers in detached mode.
+**Build and start containers in detached mode**
 ```
 $ docker-compose up -d
 ```
 
-## Verify if your container is up
+**Verify if your container is up**
 ```
 $ docker-compose ps
 ```
 
-## Access in your browser
+**Access in your browser**
+
 http://php-quizit.io
 
-## Shutdown the containers and docker machine
+**Shutdown the containers and docker machine**
 ```
 $ docker-compose stop
 $ exit
