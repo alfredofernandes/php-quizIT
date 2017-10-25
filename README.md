@@ -69,6 +69,7 @@ $ sudo nano /etc/hosts
 ```
 
 Now, comment all lines that contains 192.168.99.100 - if any - with an # in the beggining of the line.
+
 Also, in the end of the file, add this line:
 ```
 $ 192.168.99.100 php-quizit.io
