@@ -61,7 +61,7 @@ $ git clone https://github.com/gcrozariol/php-quizIT.git
 $ cd php-quizIT
 ```
 
-**Open /etc/hosts file using Terminal**
+**Mac hosts: Open /etc/hosts file using Terminal**
 ```
 $ sudo nano /etc/hosts
 ```
@@ -94,6 +94,13 @@ $ cd /Project/php-quizIT
 ```
 $ docker-compose up -d
 ```
+```
+
+**Database import the db_queries.sql **
+```
+$ docker exec -i phpquizit_mysql_1 mysql -u root --password="secret" phpquiz < database/db_queries.sql
+```
+
 
 **Verify if your container is up**
 ```
