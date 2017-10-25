@@ -62,15 +62,18 @@ $ cd php-quizIT
 ```
 
 **Update /etc/hosts file in your local machine**
+
 Open a new tab in the terminal and run the following code:
 ```
-sudo nano /etc/hosts
+$ sudo nano /etc/hosts
 ```
+
 Now, comment all lines that contains 192.168.99.100 - if any - with an # in the beggining of the line.
 Also, in the end of the file, add this line:
 ```
-192.168.99.100 php-quizit.io
+$ 192.168.99.100 php-quizit.io
 ```
+
 To conclude this step, hit Option-O, then Return Key and then Command-W to close this terminal tab.
 
 **Start the docker machine**
