@@ -16,7 +16,8 @@ You can reach us at: hello@gcrozariol.com, hello@julianalacerda.com or hello@alf
     1.4 - Locate and enter the Import tab; 
     1.5 - Inside the Import tab, click in "Choose File"; 
     1.6 - Find in your computer the db_queries.sql file - located in the project's Database folder;
-    1.7 - Select the bd_queries.sql file and at the bottom of the page, click Go.
+    1.7 - Select the db_queries.sql file and at the bottom of the page, click Go.
 
 02 - Running the project.
-    2.1 - Open your browser and go to localhost/phpquiz/
+    2.1 - Open your browser and go to localhost/project
+    2.2 - 

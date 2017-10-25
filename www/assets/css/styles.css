@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.centered {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-actions {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.btn-custom {
+    min-width:370px;
+    margin: 3px;
+}
