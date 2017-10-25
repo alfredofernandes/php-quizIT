@@ -55,24 +55,31 @@ _Total: 100 points._
 ## Docker Setup
 _Make sure you have already installed [Docker](https://www.docker.com)._
 
-**Retrieve git project**
+**Retrieve Git Project**
 ```
 $ git clone https://github.com/gcrozariol/php-quizIT.git
 $ cd php-quizIT
 ```
 
-**Update your /etc/hosts file in your local machine:**
+**Update /etc/hosts file in your local machine**
+Open a new tab in the terminal and run the following code:
+```
+sudo nano /etc/hosts
+```
+Now, comment all lines that contains 192.168.99.100 - if any - with an # in the beggining of the line.
+Also, in the end of the file, add this line:
 ```
 192.168.99.100 php-quizit.io
 ```
+To conclude this step, hit Option-O, then Return Key and then Command-W to close this terminal tab.
 
-**Start you docker machine and access it**
+**Start the docker machine**
 ```
 $ docker-machine start
 $ docker-machine ssh
 ```
 
-**Access your directory /Project/php-quizIT**
+**Access your project directory**
 ```
 $ cd /Project/php-quizIT
 ```
