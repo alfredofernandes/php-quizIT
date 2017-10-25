@@ -100,7 +100,7 @@ $ docker-compose up -d
 $ docker-compose ps
 ```
 
-**Database import the SQL file: db_queries.sql **
+**Database import the SQL file: db_queries.sql**
 ```
 $ docker exec -i phpquizit_mysql_1 mysql -u root --password="secret" phpquiz < database/db_queries.sql
 ```
