@@ -61,7 +61,7 @@ $ git clone https://github.com/gcrozariol/php-quizIT.git
 $ cd php-quizIT
 ```
 
-**Open /etc/hosts file using Terminal**
+**Mac hosts: Open /etc/hosts file using Terminal**
 ```
 $ sudo nano /etc/hosts
 ```
@@ -75,7 +75,7 @@ Terminal is going to ask your password. Enter it and hit the Return Key.
 $ 192.168.99.100 php-quizit.io
 ```
 
-**Exit the hosts file**
+_Exit the hosts file:_
 
 Hit Option-O to save the changes, then the Return Key to confirm it and then Option-X to close the file.
 
@@ -95,14 +95,22 @@ $ cd /Project/php-quizIT
 $ docker-compose up -d
 ```
 
-**Verify if your container is up**
+**Verify if your containers is up and running**
 ```
 $ docker-compose ps
 ```
 
+**Database import the SQL file: db_queries.sql**
+```
+$ docker exec -i phpquizit_mysql_1 mysql -u root --password="secret" phpquiz < database/db_queries.sql
+```
+
+
+
 **Access in your browser**
 
 http://php-quizit.io
+
 
 **Shutdown the containers and docker machine**
 ```
