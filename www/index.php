@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -88,3 +89,7 @@
 </html>
 
 <?php ?>
+=======
+<?php
+    echo "<h2>PHP - Quiz IT</h2>";
+>>>>>>> 87086b228789d369883a79e338d1eb25e231cc46
