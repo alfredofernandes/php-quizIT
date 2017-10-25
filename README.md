@@ -67,6 +67,7 @@ $ sudo nano /etc/hosts
 ```
 
 **Enter your password**
+
 Terminal is going to ask your password. Enter it and hit the Return Key.
 
 **Add this code into the last line of the hosts file**
@@ -75,6 +76,7 @@ $ 192.168.99.100 php-quizit.io
 ```
 
 **Exit the hosts file**
+
 Hit Option-O to save the changes, then the Return Key to confirm it and then Option-X to close the file.
 
 **Start the docker machine**
