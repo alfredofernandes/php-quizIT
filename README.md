@@ -101,6 +101,7 @@ $ docker-compose ps
 ```
 
 **Access in your browser**
+
 http://php-quizit.io
 
 **Shutdown the containers and docker machine**
