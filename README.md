@@ -94,7 +94,6 @@ $ cd /Project/php-quizIT
 ```
 $ docker-compose up -d
 ```
-```
 
 **Database import the db_queries.sql **
 ```
@@ -108,7 +107,6 @@ $ docker-compose ps
 ```
 
 **Access in your browser**
-
 http://php-quizit.io
 
 **Shutdown the containers and docker machine**
