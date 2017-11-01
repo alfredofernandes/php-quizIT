@@ -19,6 +19,9 @@
         <li class="breadcrumb-item active" aria-current="page">Delete</li>
     </ol>
 </nav>
+
+<h5>Questions of the Quiz: <?php echo $quizRow['title']; ?></h5>
+
 <?php
     $confirm = (isset($_GET['confirm'])) ? $_GET['confirm'] : null;
     $id = (isset($_GET['id'])) ? $_GET['id'] : null;
@@ -30,8 +33,8 @@
         <br>
 
         <p class="text-center">
-            <a class="btn btn-danger" href="?link=AdminQuestionDelete&QuizId=$quizId&id=<?php echo $id; ?>&confirm=yes">Yes</a>
-            <a class="btn btn-primary" href="?link=AdminQuestionList&QuizId=$quizId">No</a>
+            <a class="btn btn-danger" href="?link=AdminQuestionDelete&QuizId=<?php echo $quizId; ?>&id=<?php echo $id; ?>&confirm=yes">Yes</a>
+            <a class="btn btn-primary" href="?link=AdminQuestionList&QuizId=<?php echo $quizId; ?>">No</a>
         </p>
 
 <?php } elseif ($confirm == 'yes') {
