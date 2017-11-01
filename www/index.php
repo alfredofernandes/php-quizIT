@@ -9,7 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Quiz IT :: Home</title>
     </head>
@@ -17,28 +16,51 @@
         <div class="container">
             <?php
                 require_once('Application/Core/Database/DBConnect.php');
-                require_once('Application/Core/Message/DisplayError.php');
 
                 // Connect to database
                 $conn = DBConnect();
                 
-                if (isset($_GET['link']) && ($_GET['link'] == 'UserList')) {
-                    require_once('Application/User/UserList.php');
+                if (isset($_GET['link']) && ($_GET['link'] == 'AdminHome')) {
+                    require_once('Application/Administrator/Home.php');
                     
-                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserInsert')) {
-                    require_once('Application/User/UserInsert.php');
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminUserList')) {
+                    require_once('Application/Administrator/UserList.php');
                     
-                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserEdit')) {
-                    require_once('Application/User/UserEdit.php');
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminUserAdd')) {
+                    require_once('Application/Administrator/UserAdd.php');
                     
-                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserDelete')) {
-                    require_once('Application/User/UserDelete.php');
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminUserEdit')) {
+                    require_once('Application/Administrator/UserEdit.php');
                     
-                } elseif (isset($_GET['link']) && ($_GET['link'] == 'LoginUser')) {
-                    require_once('Application/User/LoginUser.php');
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminUserDelete')) {
+                    require_once('Application/Administrator/UserDelete.php');
                     
-                } elseif (isset($_GET['link']) && ($_GET['link'] == 'Logout')) {
-                    require_once('Application/User/Logout.php');
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuizList')) {
+                    require_once('Application/Administrator/QuizList.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuizAdd')) {
+                    require_once('Application/Administrator/QuizAdd.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuizEdit')) {
+                    require_once('Application/Administrator/QuizEdit.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuizDelete')) {
+                    require_once('Application/Administrator/QuizDelete.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuestionList')) {
+                    require_once('Application/Administrator/QuestionList.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuestionAdd')) {
+                    require_once('Application/Administrator/QuestionAdd.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuestionEdit')) {
+                    require_once('Application/Administrator/QuestionEdit.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminQuestionDelete')) {
+                    require_once('Application/Administrator/QuestionDelete.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminTestAttemptList')) {
+                    require_once('Application/Administrator/TestAttemptList.php');
 
                 } else {
                     require_once('Application/User/Home.php');

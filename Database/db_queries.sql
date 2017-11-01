@@ -1,76 +1,93 @@
 /* Creating the Database */
-
 DROP DATABASE IF EXISTS phpquiz;
 CREATE DATABASE phpquiz;
 USE phpquiz;
 
+
 /* Creating the Tables */
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(45) NOT NULL,
-  `lastname` varchar(45) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone` varchar(45) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `username` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
+DROP TABLE IF EXISTS `Users`;
+CREATE TABLE IF NOT EXISTS `Users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `phone` VARCHAR(45) NOT NULL,
+  `address` VARCHAR(200) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `admin` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
+ENGINE = InnoDB;
 
-DROP TABLE IF EXISTS `subjects`;
-CREATE TABLE `subjects` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `questions`;
-CREATE TABLE `questions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subjectid` int(11) NOT NULL,
-  `title` varchar(500) NOT NULL,
-  `answer1` varchar(500) NOT NULL,
-  `answer2` varchar(500) NOT NULL,
-  `answer3` varchar(500) NOT NULL,
-  `answer4` varchar(500) NOT NULL,
-  `correctanswer` varchar(1) NOT NULL,
+DROP TABLE IF EXISTS `Quizes`;
+CREATE TABLE IF NOT EXISTS `Quizes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NOT NULL,
+  `active` TINYINT NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+DROP TABLE IF EXISTS `Questions`;
+CREATE TABLE IF NOT EXISTS `Questions` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `quiz_id` INT NOT NULL,
+  `title` VARCHAR(500) NOT NULL,
+  `answer1` VARCHAR(500) NOT NULL,
+  `answer2` VARCHAR(500) NOT NULL,
+  `answer3` VARCHAR(500) NOT NULL,
+  `answer4` VARCHAR(500) NOT NULL,
+  `correct_answer` VARCHAR(1) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_subjects_idsubject_idx` (`subjectid`),
-  CONSTRAINT `fk_subjects_idsubject` FOREIGN KEY (`subjectid`) REFERENCES `subjects` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  INDEX `fk_questions_quiz_id_idx` (`quiz_id` ASC),
+  CONSTRAINT `fk_questions_quiz_id`
+    FOREIGN KEY (`quiz_id`)
+    REFERENCES `Quizes` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
-DROP TABLE IF EXISTS `results`;
-CREATE TABLE `results` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `userid` int(11) NOT NULL,
-  `subjectid` int(11) NOT NULL,
-  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `score` int(11) NOT NULL,
+
+DROP TABLE IF EXISTS `Results`;
+CREATE TABLE IF NOT EXISTS `Results` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `quiz_id` INT NOT NULL,
+  `time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `score` INT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_users_userid_idx` (`userid`),
-  KEY `fk_subjects_subjectid_idx` (`subjectid`),
-  CONSTRAINT `fk_subjects_subjectid` FOREIGN KEY (`subjectid`) REFERENCES `subjects` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_users_userid` FOREIGN KEY (`userid`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  INDEX `fk_results_user_id_idx` (`user_id` ASC),
+  INDEX `fk_results_quiz_id_idx` (`quiz_id` ASC),
+  CONSTRAINT `fk_results_user_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `Users` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_results_quiz_id`
+    FOREIGN KEY (`quiz_id`)
+    REFERENCES `Quizes` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 
 /* Inserting the Values */
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `phone`, `address`, `username`, `password`) VALUES
-(1,'Admin','Admin','admin@admin.com','6476753311','46 Spadina Avenue','admin','admin'),
-(2,'Guilherme','Crozariol','hello@gcrozariol.com','6476753313','12 Deerford Road','guilherme','1234'),
-(3,'Alfredo','Fernandes','hello@alfredofernandes.com','4165000594','890 Mount Pleasant Road','alfredo','1234'),
-(4,'Juliana','Lacerda','hello@julianalacerda.com','6479388639','32 Erskine Avenue','juliana','1234');
+INSERT INTO `Users` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `username`, `password`, `admin`) VALUES
+(1,'Admin','Admin','admin@admin.com','6476753311','46 Spadina Avenue','admin','admin', 1),
+(2,'Guilherme','Crozariol','hello@gcrozariol.com','6476753313','12 Deerford Road','guilherme','1234', 0),
+(3,'Alfredo','Fernandes','hello@alfredofernandes.com','4165000594','890 Mount Pleasant Road','alfredo','1234', 0),
+(4,'Juliana','Lacerda','hello@julianalacerda.com','6479388639','32 Erskine Avenue','juliana','1234', 0);
 
-INSERT INTO `subjects` (`id`, `subject`) VALUES
-(1,'C'),
-(2,'C#');
+INSERT INTO `Quizes` (`id`, `title`, `active`) VALUES
+(1,'C', 1),
+(2,'C#', 1);
 
-INSERT INTO `questions` (`id`, `subjectid`, `title`, `answer1`, `answer2`, `answer3`, `answer4`, `correctanswer`) VALUES
+INSERT INTO `Questions` (`id`, `quiz_id`, `title`, `answer1`, `answer2`, `answer3`, `answer4`, `correct_answer`) VALUES
 (1,1,'We can insert pre written code in a C program by using:','#read','#get','#include','#put','c'),
 (2,1,'The first expression in a for loop is:','Step value of loop','Value of the counter variable','Any of above','None of above','b'),
 (3,1,'Break statement is used for:','Quit a program','Quit the current iteration','Both of above','None of above','b'),
