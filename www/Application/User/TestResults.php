@@ -8,7 +8,7 @@
     </ol>
 </nav>
 <?php
-	$userId = $_SESSION['id'];
+    $userId = $_SESSION['userId'];
 
     //execute the command
     $sSQL = "SELECT * FROM Results WHERE user_id = '$userId'";

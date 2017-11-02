@@ -9,14 +9,12 @@
 </nav>
 <?php require_once('Application/Core/Message/DisplayError.php'); ?>
 <?php
-    
-    $userID = $_SESSION['id'];
-	//$userID = 4;
+    $userId = $_SESSION['userId'];
 
     if (!isset($_POST['submit'])) 
     {
         //load data for $id
-        $sSQL = "SELECT * FROM Users WHERE id = '$userID'";
+        $sSQL = "SELECT * FROM Users WHERE id = '$userId'";
         $resultSet = mysqli_query($conn, $sSQL);
         $row = mysqli_fetch_assoc($resultSet);
 ?>
