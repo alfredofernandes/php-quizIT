@@ -10,8 +10,8 @@
 <?php require_once('Application/Core/Message/DisplayError.php'); ?>
 <?php
     
-    //$userID = $_SESSION['id'];
-	$userID = 4;
+    $userID = $_SESSION['id'];
+	//$userID = 4;
 
     if (!isset($_POST['submit'])) 
     {
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 mb-3">
+            <div class="col-md-6 mb-3">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>" placeholder="Email" required>
                 <div class="invalid-feedback">
@@ -74,13 +74,6 @@
                 <input type="password" class="form-control" id="password" name="password" value="<?php echo $row['password']; ?>" placeholder="Password" required>
                 <div class="invalid-feedback">
                     Provide a valid password.
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" class="form-control" id="cpassword" name="cpassword" value="<?php echo $row['password']; ?>" placeholder="Confirm Password" required>
-                <div class="invalid-feedback">
-                    Confirm your password.
                 </div>
             </div>
         </div>
