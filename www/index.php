@@ -62,8 +62,27 @@
                 } elseif (isset($_GET['link']) && ($_GET['link'] == 'AdminTestAttemptList')) {
                     require_once('Application/Administrator/TestAttemptList.php');
 
-                } else {
+                //USER
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserHome')) {
                     require_once('Application/User/Home.php');
+
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserProfile')) {
+                    require_once('Application/User/Profile.php');
+
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserQuiz')) {
+                    require_once('Application/User/Quiz.php');
+
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserQuizResult')) {
+                    require_once('Application/User/QuizResult.php');
+
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserResults')) {
+                    require_once('Application/User/TestResults.php');
+
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserSignUp')) {
+                    require_once('Application/User/SignUp.php');
+
+                } else {
+                    require_once('Application/Core/Login/LoginUser.php');
                 }
 
                 mysqli_close($conn);
