@@ -27,7 +27,6 @@
         }
     }
 ?>
-<h1 class="centered">Quiz IT</h1>
 
 <div class="col-md-4 centered">
     <form class="form-signin" action="?link=LoginUser" method="post">

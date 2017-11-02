@@ -71,6 +71,7 @@
 
         <p class="text-center">
             <input class="btn btn-primary" type="submit" name="submit" value="Create User">
+            <a class="btn btn-secondary" href="?link=LoginUser" role="button">Cancel</a>
         </p>
     </form>
 
