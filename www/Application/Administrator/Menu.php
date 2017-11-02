@@ -1,3 +1,6 @@
+<?php 
+    require_once('Application/Core/Login/LoginCheck.php'); 
+?>
 <br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Menu</a>
