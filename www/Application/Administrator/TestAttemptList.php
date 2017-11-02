@@ -60,7 +60,7 @@
                 <?php if($score >= 80) { ?>
                     <span class="badge badge-success">Aproved</span>
                 <?php } else { ?>
-                    <span class="badge badge-danger">Faild</span>
+                    <span class="badge badge-danger">Failed</span>
                 <?php } ?>
             </td>
         </tr>
