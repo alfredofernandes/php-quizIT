@@ -78,9 +78,12 @@
 
                 } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserResults')) {
                     require_once('Application/User/TestResults.php');
-
+                    
                 } elseif (isset($_GET['link']) && ($_GET['link'] == 'UserSignUp')) {
                     require_once('Application/User/SignUp.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'LoginUser')) {
+                    require_once('Application/Core/Login/LoginUser.php');
 
                 } else {
                     require_once('Application/Core/Login/LoginUser.php');
