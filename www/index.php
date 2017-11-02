@@ -16,7 +16,7 @@
     <body>
         <div class="container">
             <br>
-            <h2 class="text-center">Quiz IT</h2>
+            <h1 class="display-4 text-center">Quiz IT</h1>
             <?php
                 require_once('Application/Core/Database/DBConnect.php');
 
