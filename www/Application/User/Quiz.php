@@ -1,5 +1,5 @@
 <?php 
-    // require_once('Application/Core/Login/LoginCheck.php'); 
+    require_once('Application/Core/Login/LoginCheck.php'); 
     require_once('Application/User/Menu.php'); 
 
     if (isset($_GET['id'])) 
