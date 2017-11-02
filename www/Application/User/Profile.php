@@ -80,7 +80,6 @@
 
         <p class="text-center">
             <input class="btn btn-primary" type="submit" name="submit" value="Update">
-            <a class="btn btn-secondary" href="?link=UserProfile" role="button">Back</a>
         </p>
     </form>
 
