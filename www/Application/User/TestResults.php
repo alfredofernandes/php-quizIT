@@ -9,8 +9,8 @@
 </nav>
 <?php
 
-	//$userID = $_SESSION['id'];
-	$userID = 4;
+	$userID = $_SESSION['id'];
+	//$userID = 4;
 
     //execute the command
     $sSQL = "SELECT * FROM Results WHERE user_id = '$userID'";

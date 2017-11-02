@@ -10,8 +10,8 @@
 <?php require_once('Application/Core/Message/DisplayError.php'); ?>
 <?php
     
-    //$userID = $_SESSION['id'];
-	$userID = 4;
+    $userID = $_SESSION['id'];
+	//$userID = 4;
 
     if (!isset($_POST['submit'])) 
     {

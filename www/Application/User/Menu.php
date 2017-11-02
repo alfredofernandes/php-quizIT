@@ -2,8 +2,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 	<?php 
-		//$username = $_SESSION['username'];
-		$username = "Juliana";
+		$username = $_SESSION['username'];
+		//$username = "Juliana";
 	?>
 
   <a class="navbar-brand" >Olá, <?= $username ?></a>
