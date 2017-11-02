@@ -25,4 +25,4 @@
     </form>
 </div>
 
-<h5 class="centered">You don't have access? <a href="?link=UserInsert">Create a new here!</a></h5>
+<h5 class="centered">You don't have access? <a href="?link=UserSignUp">Create a new here!</a></h5>

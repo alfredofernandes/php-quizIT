@@ -1,1 +1,27 @@
-<h2>User / Menu</h2>
+<br>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+	<?php 
+		//$username = $_SESSION['username'];
+		$username = "Juliana";
+	?>
+
+  <a class="navbar-brand" >Olá, <?= $username ?></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="?link=UserHome">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?link=UserProfile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?link=UserResults">Test Results</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
