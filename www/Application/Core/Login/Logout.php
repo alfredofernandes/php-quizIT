@@ -1,1 +1,3 @@
-<h2>Logout</h2>
+<?php
+    session_destroy();
+    header("Location: ?link=LoginUser");

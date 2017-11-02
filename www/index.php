@@ -8,13 +8,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Quiz IT :: Home</title>
     </head>
     <body>
         <div class="container">
+            <br>
+            <h2 class="text-center">Quiz IT</h2>
             <?php
                 require_once('Application/Core/Database/DBConnect.php');
 
@@ -84,6 +86,9 @@
                     
                 } elseif (isset($_GET['link']) && ($_GET['link'] == 'LoginUser')) {
                     require_once('Application/Core/Login/LoginUser.php');
+                    
+                } elseif (isset($_GET['link']) && ($_GET['link'] == 'Logout')) {
+                    require_once('Application/Core/Login/Logout.php');
 
                 } else {
                     require_once('Application/Core/Login/LoginUser.php');
@@ -93,5 +98,9 @@
             ?>
         </div>
     </body>
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/myscript.js"></script>
 </html>
 <?php ob_flush(); ?>

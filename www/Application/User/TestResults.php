@@ -1,5 +1,5 @@
 <?php 
-    // require_once('Application/Core/Login/LoginCheck.php'); 
+    require_once('Application/Core/Login/LoginCheck.php'); 
     require_once('Application/User/Menu.php'); 
 ?>
 <nav aria-label="breadcrumb" role="navigation">
@@ -8,12 +8,10 @@
     </ol>
 </nav>
 <?php
-
-	$userID = $_SESSION['id'];
-	//$userID = 4;
+	$userId = $_SESSION['id'];
 
     //execute the command
-    $sSQL = "SELECT * FROM Results WHERE user_id = '$userID'";
+    $sSQL = "SELECT * FROM Results WHERE user_id = '$userId'";
     $resultset = mysqli_query($conn, $sSQL);
 
     if(!$resultset)
@@ -52,7 +50,7 @@
                 <?php if($score >= 80) { ?>
                     <span class="badge badge-success">Aproved</span>
                 <?php } else { ?>
-                    <span class="badge badge-danger">Fail</span>
+                    <span class="badge badge-danger">Failed</span>
                 <?php } ?>
             </td>
         </tr>
