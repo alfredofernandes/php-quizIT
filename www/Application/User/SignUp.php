@@ -4,7 +4,7 @@
         <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
     </ol>
 </nav>
-
+<?php require_once('Application/Core/Message/DisplayError.php'); ?>
 <?php
     if (!isset($_POST['submit'])) 
     {
@@ -89,7 +89,7 @@
         if($isInserted)
         {
 
-        	$id = mysqli_insert_id($conn); 
+        	$id = mysqli_insert_id($conn);
 
         	$_SESSION['username'] = $username;
             $_SESSION['id'] = $id;
