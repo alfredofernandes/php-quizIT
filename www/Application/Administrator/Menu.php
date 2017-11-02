@@ -1,9 +1,9 @@
 <?php 
-    require_once('Application/Core/Login/LoginCheck.php'); 
+    $username = $_SESSION['username'];
 ?>
 <br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Menu</a>
+  <a class="navbar-brand" >Hello, <?php echo $username; ?>!</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,6 +20,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?link=AdminTestAttemptList">Test Attemps</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?link=Logout">Logout</a>
       </li>
     </ul>
   </div>

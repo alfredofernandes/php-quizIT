@@ -1,3 +1,6 @@
+<?php 
+    require_once('Application/User/Menu.php'); 
+?>
 </br>
 <nav aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb">
@@ -67,8 +70,7 @@
         </div>
 
         <p class="text-center">
-            <input class="btn btn-primary" type="submit" name="submit" value="Insert">
-            <a class="btn btn-secondary" href="?link=" role="button">Back</a>
+            <input class="btn btn-primary" type="submit" name="submit" value="Create User">
         </p>
     </form>
 
@@ -88,11 +90,12 @@
 
         if($isInserted)
         {
-
         	$id = mysqli_insert_id($conn);
 
-        	$_SESSION['username'] = $username;
-            $_SESSION['id'] = $id;
+            // sessions
+            $_SESSION['userId'] = $id;
+            $_SESSION['username'] = $username;
+            $_SESSION['userAdmin'] = 0;
 
             header("Location: ?link=UserHome");
 

@@ -1,12 +1,12 @@
+<?php 
+    $userId = $_SESSION['userId'];
+    $username = $_SESSION['username'];
+    
+    if (isset($userId)) { 
+?>
 <br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-	<?php 
-		$username = $_SESSION['username'];
-		//$username = "Juliana";
-	?>
-
-  <a class="navbar-brand" >Olá, <?= $username ?></a>
+  <a class="navbar-brand" >Hello, <?php echo $username; ?>!</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,7 +21,11 @@
       <li class="nav-item">
         <a class="nav-link" href="?link=UserResults">Test Results</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?link=Logout">Logout</a>
+      </li>
     </ul>
   </div>
 </nav>
 <br>
+<?php } ?>
