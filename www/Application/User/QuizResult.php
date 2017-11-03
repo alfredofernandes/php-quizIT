@@ -13,5 +13,4 @@
 		$id = $_GET['id'];
     }
 
-    var_dump($_COOKIE['current']);
-    
+    var_dump($_POST);
