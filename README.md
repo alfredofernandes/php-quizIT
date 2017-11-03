@@ -56,16 +56,16 @@ _Total: 100 points._
 
 **Setting up your machine**
 	
-    - Open XAMPP;
-	- Start both Apache and MySQL modules;
+- Open XAMPP;
+- Start both Apache and MySQL modules;
 
 **Creating the database**
 	
-    - Open PhpMyAdmin's in a browser of your choice;
-	- Locate and enter the Import tab; 
-	- Inside the Import tab, click in "Choose File"; 
-	- Find in your computer the db_queries.sql file - located in the project's Database folder;
-	- Select the db_queries.sql file and at the bottom of the page, click Go;
+- Open PhpMyAdmin's in a browser of your choice;
+- Locate and enter the Import tab; 
+- Inside the Import tab, click in "Choose File"; 
+- Find in your computer the db_queries.sql file - located in the project's Database folder;
+- Select the db_queries.sql file and at the bottom of the page, click Go;
 
 **Running the project**
 	
