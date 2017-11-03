@@ -16,3 +16,25 @@
     echo '<pre>';
     var_dump($_POST);
     echo '</pre>';
+?>
+
+<main role="main" class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm text-center">
+                <br>
+                <br>
+                <h1>SCORE <br> 80%<h1/>
+            </div>
+            <div class="col-sm text-center">
+                <h1>RESULT<h1/>
+            </div>
+            <div class="col-sm text-center">
+                <br>
+                <br>
+                <h1><span class="badge badge-success">Aproved</span><h1/>
+                <h1><span class="badge badge-danger">Failed</span><h1/>
+            </div>
+        </div>
+    </div>
+</main>
