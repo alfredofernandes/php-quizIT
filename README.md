@@ -51,6 +51,22 @@ _Total: 100 points._
 	- Document any existing/known bug;
 	- Document group members and student_ids;
 	- Each group member shall submit an individual file though moodle.
+    
+## XAMPP Setup
+
+**Setting up your machine**
+	- Open XAMPP;
+	- Start both Apache and MySQL modules;
+
+**Creating the database**
+	- Open PhpMyAdmin's in a browser of your choice;
+	- Locate and enter the Import tab; 
+	- Inside the Import tab, click in "Choose File"; 
+	- Find in your computer the db_queries.sql file - located in the project's Database folder;
+	- Select the db_queries.sql file and at the bottom of the page, click Go;
+
+**Running the project**
+	- Open your browser and go to localhost/project/www/index.php;
 
 ## Docker Setup
 _Make sure you have already installed [Docker](https://www.docker.com)._
