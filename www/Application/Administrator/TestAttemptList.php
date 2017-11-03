@@ -19,7 +19,22 @@
         echo'Could not run query: ' . mysql_error();
         exit;
     }
+
+    //totalAproved
+    $aSQL = "SELECT COUNT(id) as total FROM Results WHERE score >= 80";
+    $aResultSet = mysqli_query($conn, $aSQL);
+    $totalAproved = mysqli_fetch_assoc($aResultSet);
+
+    //totalFailed
+    $fSQL = "SELECT COUNT(id) as total FROM Results WHERE score < 80";
+    $fResultSet = mysqli_query($conn, $fSQL);
+    $totalFailed = mysqli_fetch_assoc($fResultSet);
 ?>
+
+<h3 class="col-sm text-center">
+    <span class="badge badge-success">Total Aproved: <?php echo $totalAproved['total']; ?></span>
+    <span class="badge badge-danger">Total Failed: <?php echo $totalFailed['total']; ?></span>
+</h3><br>
 
 <table class="table table-striped">
 <thead>

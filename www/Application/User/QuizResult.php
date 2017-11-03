@@ -56,9 +56,9 @@
                 <h1>RESULT<h1/><br>
 
                 <?php if ($score >= 80) { ?>
-                    <h1><span class="badge badge-success">Aproved</span><h1/></br>
+                    <h1><span class="badge badge-success">Aproved</span></h1></br>
                 <?php } else { ?>
-                    <h1><span class="badge badge-danger">Failed</span><h1/></br>
+                    <h1><span class="badge badge-danger">Failed</span></h1></br>
                 <?php } ?>
 
                 <h1>Your score was <?php echo $score; ?>%</h1></br></br>
