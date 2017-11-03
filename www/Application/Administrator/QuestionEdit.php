@@ -123,7 +123,7 @@
         $answer4 = $_POST['answer4'];
         $correct_answer = $_POST['correct_answer'];
 
-        //inset
+        // Insert
         $sSQL = "UPDATE Questions SET title = '$title', answer1 = '$answer1', answer2 = '$answer2', answer3 = '$answer3', answer4 = '$answer4', correct_answer = '$correct_answer' WHERE id = '$id'";
         $isInserted = mysqli_query($conn, $sSQL);
 

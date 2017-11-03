@@ -101,7 +101,7 @@
         $answer4 = $_POST['answer4'];
         $correct_answer = $_POST['correct_answer'];
 
-        //inset
+        // Insert
         $sSQL = "INSERT INTO Questions (quiz_id, title, answer1, answer2, answer3, answer4, correct_answer) VALUES ('$quizId', '$title', '$answer1', '$answer2', '$answer3', '$answer4', '$correct_answer')";
         $isInserted = mysqli_query($conn, $sSQL);
 

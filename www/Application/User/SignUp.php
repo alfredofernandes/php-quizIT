@@ -85,7 +85,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        //inset
+        // Insert
         $sSQL = "INSERT INTO Users (first_name, last_name, email, phone, address, username, password) VALUES ('$first_name', '$last_name', '$email', '$phone', '$address', '$username', '$password')";
         $isInserted = mysqli_query($conn, $sSQL);
 
@@ -93,7 +93,7 @@
         {
         	$id = mysqli_insert_id($conn);
 
-            // sessions
+            // Sessions
             $_SESSION['userId'] = $id;
             $_SESSION['username'] = $username;
             $_SESSION['userAdmin'] = 0;

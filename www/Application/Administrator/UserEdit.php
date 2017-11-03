@@ -110,7 +110,7 @@
         $password = $_POST['password'];
         $admin = $_POST['admin'];
 
-        //inset
+        // Insert
         $sSQL = "UPDATE Users SET first_name = '$first_name', last_name = '$last_name', email = '$email', phone = '$phone', address = '$address', username = '$username', password = '$password', admin = '$admin' WHERE id = '$id'";
         $isInserted = mysqli_query($conn, $sSQL);
 

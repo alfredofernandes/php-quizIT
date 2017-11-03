@@ -58,7 +58,7 @@
         $title = $_POST['title'];
         $active = $_POST['active'];
 
-        //inset
+        // Insert
         $sSQL = "UPDATE Quizes SET title = '$title', active = '$active' WHERE id = '$id'";
         $isInserted = mysqli_query($conn, $sSQL);
 

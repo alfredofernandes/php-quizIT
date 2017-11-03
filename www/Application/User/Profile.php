@@ -81,7 +81,6 @@
         </p>
     </form>
 
-
 <?php } else { 
 
         $id = $_POST['id'];
@@ -93,7 +92,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        //inset
+        // Insert
         $sSQL = "UPDATE Users SET first_name = '$first_name', last_name = '$last_name', email = '$email', phone = '$phone', address = '$address', username = '$username', password = '$password' WHERE id = '$id'";
         $isInserted = mysqli_query($conn, $sSQL);
 
@@ -103,4 +102,5 @@
         } else {
             header("Location: ?link=UserProfile&msg=EditError");
         }
-    } ?>
+    } 
+?>

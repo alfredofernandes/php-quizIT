@@ -48,7 +48,7 @@
         $title = $_POST['title'];
         $active = $_POST['active'];
 
-        //inset
+        // Insert
         $sSQL = "INSERT INTO Quizes (title, active) VALUES ('$title', '$active')";
         $isInserted = mysqli_query($conn, $sSQL);
 

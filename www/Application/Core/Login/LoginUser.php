@@ -11,7 +11,7 @@
 
         if($userChecked)
         {
-            // sessions
+            // Sessions
             $_SESSION['userId'] = $userChecked['id'];
             $_SESSION['username'] = $userChecked['username'];
             $_SESSION['userAdmin'] = $userChecked['admin'];

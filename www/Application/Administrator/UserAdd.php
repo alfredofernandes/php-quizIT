@@ -98,7 +98,7 @@
         $password = $_POST['password'];
         $admin = $_POST['admin'];
 
-        //inset
+        // Insert
         $sSQL = "INSERT INTO Users (first_name, last_name, email, phone, address, username, password, admin) VALUES ('$first_name', '$last_name', '$email', '$phone', '$address', '$username', '$password', '$admin')";
         $isInserted = mysqli_query($conn, $sSQL);
 
