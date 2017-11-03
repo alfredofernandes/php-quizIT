@@ -53,6 +53,7 @@ _Total: 100 points._
 	- Each group member shall submit an individual file though moodle.
     
 ## XAMPP Setup
+_Make sure you have already installed [XAMPP](https://www.apachefriends.org/index.html)._
 
 **Setting up your machine**
 	
