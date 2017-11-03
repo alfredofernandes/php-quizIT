@@ -69,7 +69,7 @@ _Total: 100 points._
 
 **Running the project**
 	
-    - Open your browser and go to localhost/project/www/index.php;
+- Open your browser and go to localhost/project/www/index.php;
 
 ## Docker Setup
 _Make sure you have already installed [Docker](https://www.docker.com)._
