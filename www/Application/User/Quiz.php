@@ -38,16 +38,16 @@
 						<br>
 						<div> 
 							<label>
-								<input type="radio" value="a" name="correct_answer[<?php echo $value['id']; ?>]"> A) <?php echo $value['answer1']; ?>
+								<input type="radio" value="a" name="userAnswer[<?php echo $value['id']; ?>]"> A) <?php echo $value['answer1']; ?>
 							</label><br>
 							<label>
-								<input type="radio" value="b" name="correct_answer[<?php echo $value['id']; ?>]"> B) <?php echo $value['answer2']; ?>
+								<input type="radio" value="b" name="userAnswer[<?php echo $value['id']; ?>]"> B) <?php echo $value['answer2']; ?>
 							</label><br>
 								<label>
-							<input type="radio" value="c" name="correct_answer[<?php echo $value['id']; ?>]"> C) <?php echo $value['answer3']; ?>
+							<input type="radio" value="c" name="userAnswer[<?php echo $value['id']; ?>]"> C) <?php echo $value['answer3']; ?>
 							</label><br>
 								<label>
-							<input type="radio" value="d" name="correct_answer[<?php echo $value['id']; ?>]"> D) <?php echo $value['answer4']; ?>
+							<input type="radio" value="d" name="userAnswer[<?php echo $value['id']; ?>]"> D) <?php echo $value['answer4']; ?>
 							</label><br>
 						</div>
 						
@@ -85,11 +85,6 @@
 <?php 
 /*
 	// Quiz
-    if (isset($_GET['id'])) 
-    {
-		$id = $_GET['id'];
-	}
-
 	if (!isset($_SESSION['formQuestions'])) 
 	{
         //load data for $id
