@@ -70,7 +70,7 @@ _Make sure you have already installed [XAMPP](https://www.apachefriends.org/inde
 
 **Running the project**
 	
-- Open your browser and go to localhost/project/www/index.php;
+- Open your browser and go to http://localhost:8080/dashboard/project/www/index.php;
 
 ## Docker Setup
 _Make sure you have already installed [Docker](https://www.docker.com)._
