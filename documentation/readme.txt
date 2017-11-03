@@ -9,15 +9,16 @@ You can reach us at: hello@gcrozariol.com, hello@julianalacerda.com or hello@alf
 
 -----------------------
 
-01 - Creating the database.
+01 - Setting up your machine.
     1.1 - Open XAMPP;
     1.2 - Start both Apache and MySQL modules;
-    1.3 - Open PhpMyAdmin's in a browser of your choice;
-    1.4 - Locate and enter the Import tab; 
-    1.5 - Inside the Import tab, click in "Choose File"; 
-    1.6 - Find in your computer the db_queries.sql file - located in the project's Database folder;
-    1.7 - Select the db_queries.sql file and at the bottom of the page, click Go.
 
-02 - Running the project.
-    2.1 - Open your browser and go to localhost/project
-    2.2 - 
+02 - Creating the database.
+    2.1 - Open PhpMyAdmin's in a browser of your choice;
+    2.2 - Locate and enter the Import tab; 
+    2.3 - Inside the Import tab, click in "Choose File"; 
+    2.4 - Find in your computer the db_queries.sql file - located in the project's Database folder;
+    1.5 - Select the db_queries.sql file and at the bottom of the page, click Go.
+
+03 - Running the project.
+    3.1 - Open your browser and go to localhost/project/www/index.php;
