@@ -7,4 +7,11 @@
         <li class="breadcrumb-item active" aria-current="page">Quiz Result</li>
     </ol>
 </nav>
-<?php require_once('Application/Core/Message/DisplayError.php'); ?>
+<?php 
+    if (isset($_GET['id'])) 
+    {
+		$id = $_GET['id'];
+    }
+
+    var_dump($_COOKIE['current']);
+    
